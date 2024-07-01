@@ -236,20 +236,155 @@
 // }
 
 //weather
-let weather = ("rainy");
-if(weather === "sunny");
-{
-    console.log("today is a sunny day");
-}else if(weather === "winter"){
-    console.log("is this winter seasion");
-}else if(weather === "cloudy"){
-    console.log("today is cloudy");
-}else if(weather === "rainy") {
+// let weather = ("rainy");
+// if(weather === "sunny");
+// {
+//     console.log("today is a sunny day");
+// }else if(weather === "winter"){
+//     console.log("is this winter seasion");
+// }else if(weather === "cloudy"){
+//     console.log("today is cloudy");
+// }else if(weather === "rainy") {
 
-}else{
-    console.log("invalid weather");
-}
+// }else{
+//     console.log("invalid weather");
+// }
 
 // switch case
 
+// let role = "super admin";
+// switch (role) {
 
+//      case "buyer":
+//         console.log("you can only buy product");
+//         break;
+
+//      case "seller":
+//         console.log("you can only sell product");
+//         break;
+
+
+//      case "admin":
+//         console.log("you can add your product");
+//         break;
+
+//      case "super admin":
+//         console.log("you can access everything");
+//         break;
+
+//     default:
+//        console.log("invalid Role");
+// }
+
+// /'date check'
+// let date= new Date()
+// console.log(date);
+
+// // day check
+// switch(true){
+//     case 0:
+//         console.log("today is a sunday");
+//         break;
+     
+//     case 1:
+//         console.log("today is a monday");
+//         break;    
+
+//      case 2:
+//         console.log("today is a tuesday");
+//         break;
+            
+//      case 3:
+//         console.log("today is a wednesday");
+//         break;
+
+
+
+//      case 4:
+//         console.log("today is a thursday");
+//         break;
+    
+//     case 5:
+//         console.log("today is a friday");
+//         break;  
+            
+//     case 6:
+//         console.log("today is a saturday");
+//         default:
+//             console.log(invalid result)
+// }
+
+// status
+// let status = 200;
+// switch (status) {
+//     case 201:
+//         console.log("created");
+//         break;
+
+//         case 400:
+//         console.log("bad request");
+//         break;
+
+//         case 401:
+//         console.log("unauthorized");
+//         break;
+        
+//         case 403:
+//         console.log("forbidden");
+//         break;
+
+//     default:
+//         console.log("invalid status");
+// }
+
+
+// loop
+//for loop
+
+// for (let i = 0; 1<=10; i++) {
+//     console.log("I Love JavaScript" + i);
+// }
+
+// for(let i= 0; i <= 10; i++){
+//     console.log(`2 * ${i} = {2*i}`);
+// }
+
+// for (let i= 0; i<= 20; i++){
+//     if(i % 2 === 0){
+//         console.log(`the even number are:${i}`);
+//     }
+// }
+
+// for (let i= 0; i<= 20; i++){
+//     if(i % 2 !== 0){
+//         console.log(`the odd number are:${i}`);
+//     }
+// }
+
+// /array
+// const arr = [2,3,4,5,7]
+// let sum = 0;
+// for (let i = 0; i< arr.length; i++) {
+//     sum += arr[i];
+// }
+// console.log(`the sum of array is :${sum}`);
+
+/// while loop
+// let i = 0;
+// while (i<=10) {
+//     console.log(i) 
+//     i++;
+// }
+
+//do while 
+// let i = 0;
+// do {
+//     console.log("i ove js");
+//     i++;
+// }while (i <=10);
+
+ const arr = [4,5,6,7,8,9]
+ console.log(arr);
+ console.log(arr[2]);
+ 
+ console.log(typeof arr);
