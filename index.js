@@ -207,3 +207,49 @@
 // delete obj.age;
 // console.log(obj);
 
+// let email = "samma@gmail.com";
+// let password = "123abc";
+// if(email ==="samma@gmail.com" && password ==="123abc" ) {
+//     console.log("login successfully!");
+// }else{
+//     console.log("invalid Credential");
+// }
+
+// //see grade check
+// let grade = 85;
+// if(grade >=90);
+// {
+//     console.log("grade:A")
+// }else if(grade >=80) {
+//     console.log("Grade:A");
+
+// }else if(grade >=70) {
+//     console.log("Grade:B+");
+// }else if(grade >=60) {
+//     console.log("Grade:B");
+// }else if(grade >=50) {
+//     console.log("Grade:C+");
+// }else if(grade >=40) {
+//     console.log("Grade:D+");
+// }else {
+//     console.log ("Failed");
+// }
+
+//weather
+let weather = ("rainy");
+if(weather === "sunny");
+{
+    console.log("today is a sunny day");
+}else if(weather === "winter"){
+    console.log("is this winter seasion");
+}else if(weather === "cloudy"){
+    console.log("today is cloudy");
+}else if(weather === "rainy") {
+
+}else{
+    console.log("invalid weather");
+}
+
+// switch case
+
+
