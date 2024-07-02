@@ -379,12 +379,133 @@
 //do while 
 // let i = 0;
 // do {
-//     console.log("i ove js");
+//     console.log("i love js");
 //     i++;
 // }while (i <=10);
 
- const arr = [4,5,6,7,8,9]
- console.log(arr);
- console.log(arr[2]);
- 
- console.log(typeof arr);
+
+// array
+//  const arr = [4,5,6,7,8,9,"apple", "cherry"]    //data struture
+//  console.log(arr);
+//  console.log(arr[2]);
+//  console.log(typeof arr);
+
+
+
+// const arr =[3,6,8,9,2,5,3,1]
+
+//slice
+// arr.splice(1,2);
+// console.log(arr);
+
+//slice
+
+// arr.result = arr.slice(1,4);
+// console.log(result);
+
+// //indexof
+// let output = arr.indexof(3);
+// console.log(arr);
+
+// ///lastindexof
+// let output = arr.lastIndexOfindexof(3);
+// console.log(arr);
+
+// //length
+// // console.log(arr.length);
+
+// //push
+// let res= arr.push(12);
+// console.log(arr);
+
+// //pop
+// let res= arr.pop(12);
+// console.log(arr);
+
+// console.log(res);
+
+//shift//
+// Arr.shift()
+// console.log(arr)
+
+// ///unshift
+// arr.unshift()
+// console.log(arr)
+
+//inculdes
+// arr.includes(4);
+// console.log(arr);
+
+///join
+// const output = ["hello", "World","Javascript", "is", "fun"];
+// console.log(output.join(""));
+
+
+// let arr = [];
+// let sum = 0;
+// for (let i = 1; i<= 10; i++) {
+//     arr.push(i);
+// }
+
+// for(let i = 1; i<arr.length; i++){
+//     sum += arr[i];
+// }
+// let result =sum*2;
+// console.log(`The sum of arr is:${sum}`);
+// console.log(`The multiply of sum is:${result}`);
+
+///object
+// const person = {
+//     name: "Doe Jhon",
+//     age: 56,
+//     occupation: "Professor",
+//     eduction: "Msc csit",
+//     isMarried: true,
+//     address:{
+//         street:"Bagbazar",
+//         city: "ktm",
+//         country:"Nepal",
+       
+//     },
+//     greet: function () {
+//         console.log(`Hello my name is:${this.name}.And i am ${this.age}`)
+//     },
+// };
+// const {
+//     name,
+//     age,
+//     eduction,
+//     occupation,
+//     isMarried,
+//     address:{ street, city,country},
+// } = person;
+// console.log(name,age,eduction,occupation,isMarried,street,city,country);
+// person.greet();
+
+
+//  function in javascrip
+// function myfunc(radius){
+//     return Math.PI * radius * radius;
+// }
+// let ans = myfunc(8)
+// console.log(`the area of two circle is:${ans}`);
+
+
+///calculateTotal
+
+function calculateTotal(cartItemd,taxrate){
+    let total = 0;
+    for(let i=0; i<cartItemd.length; i++){
+        total += cartItemd[i].price * cartItemd[i].quality;
+    }
+    total+= total * taxrate;
+    return total
+
+}
+let cart = [
+    {name:"Dr MArtin ", price:7000,quantity:5},
+    {name: "water bottle",price:500,quantity:2}
+];
+const result = calculateTotal(cart,0.02);
+console.log(`Your total payment is:${result}`);
+
