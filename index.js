@@ -546,7 +546,7 @@ result.style.backgroundColor = "silver";
 result.style.color = "purple";
 result.style.textAlign ="center";
 
-let output=document.getElementById("myclass")[0];
+let output=document.getElementsByClassName("myclass")[0];
 console.log(output);
 output.innerText = "alhamdulilla";
 output.style.backgroundColor = "green";
@@ -554,20 +554,20 @@ output.style.color = "red";
 output.style.textAlign ="center";
 
 
-let ans=document.getElementById("myclass");
+let ans=document.getElementsByClassName("myclass");
 ans[1].innerText = "Hello Home";
 ans[1].style.backgroundColor = "yellow";
 ans[1].style.color = "blue";
 ans[1].style.textAlign ="center";
 
-let show=document.getElementByIdTagName("span");
+let show=document.getElementsByTagName("span");
 console.log(show[0]);
 show[0].innerText = "let's do it!!";
 show[0].style.backgroundColor = "purple";
 show[0].style.color = "black";
 show[0].style.textAlign ="center";
 
-let x=document.getElementById("span");
+let x=document.getElementsByTagName("span");
 x[1].innerText = "Hello Home";
 x[1].style.backgroundColor = "red";
 x[1].style.color = "blue";
@@ -577,26 +577,25 @@ let y = document.querySelector("#btnAdd");
 y.style.backgroundColor = "green";
 y.style.color ="white";
 y.style.padding = "2vmax 4vmax";
-y.style.curosr = "pointer";
+y.style.cursor = "pointer";
 y.style.border ="none";
 y.setAttribute("class", "meroclass");
 console.log(y.getAttribute("class"));
 
 
-let v= document.querySelector("#btnDelete");
+let v= document.querySelector(".btnDelete");
 v.style.backgroundColor = "red";
 v.style.color ="white";
 v.style.padding = "2vmax 4vmax";
-v.style.curosr = "pointer";
+v.style.cursor = "pointer";
 v.style.border ="none";
+console.log(y);
 
 function addTask(){
     let display = document.createElement("h1");
     display.innerText = "This is a new element";
     document.body.prepend(display);
-
 }
-
 
 function deleteTask(){
     let h1 = document.querySelector("h1");
