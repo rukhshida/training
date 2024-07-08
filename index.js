@@ -493,19 +493,115 @@
 
 ///calculateTotal
 
-function calculateTotal(cartItemd,taxrate){
-    let total = 0;
-    for(let i=0; i<cartItemd.length; i++){
-        total += cartItemd[i].price * cartItemd[i].quality;
-    }
-    total+= total * taxrate;
-    return total
+// function calculateTotal(cartItemd,taxrate){
+//     let total = 0;
+//     for(let i=0; i<cartItemd.length; i++){
+//         total += cartItemd[i].price * cartItemd[i].quality;
+//     }
+//     total+= total * taxrate;
+//     return total
+
+// }
+// let cart = [
+//     {name:"Dr MArtin ", price:7000,quantity:5},
+//     {name: "water bottle",price:500,quantity:2}
+// ];
+// const result = calculateTotal(cart,0.02);
+// console.log(`Your total payment is:${result}`);
+
+
+// function myFunction(){
+//     let a = prompt("Enter first number?");
+//     let b = prompt("Enter second number?");
+//     let result = Number(a) + Number(b);
+//     if(result){
+//         alert (`the sum of two number is:${result`});
+//      } 
+// }
+// myFunction();
+
+
+
+// scoping//
+// function myFunction(){
+// if (true){
+// var x = 60;
+// let y = 40;
+// const z = 30;
+// console.log(y);
+// console.log(z);
+// }
+//     console.log(x);
+// }
+// myFunction();
+//
+
+// //Dom//
+// console.log(document.body); // document is the object with its hepl of access the element
+
+let result=document.getElementById("hello");
+// console.log(result);/
+result.innerText = "Learning java script!! ";
+result.style.backgroundColor = "silver";
+result.style.color = "purple";
+result.style.textAlign ="center";
+
+let output=document.getElementById("myclass")[0];
+console.log(output);
+output.innerText = "alhamdulilla";
+output.style.backgroundColor = "green";
+output.style.color = "red";
+output.style.textAlign ="center";
+
+
+let ans=document.getElementById("myclass");
+ans[1].innerText = "Hello Home";
+ans[1].style.backgroundColor = "yellow";
+ans[1].style.color = "blue";
+ans[1].style.textAlign ="center";
+
+let show=document.getElementByIdTagName("span");
+console.log(show[0]);
+show[0].innerText = "let's do it!!";
+show[0].style.backgroundColor = "purple";
+show[0].style.color = "black";
+show[0].style.textAlign ="center";
+
+let x=document.getElementById("span");
+x[1].innerText = "Hello Home";
+x[1].style.backgroundColor = "red";
+x[1].style.color = "blue";
+x[1].style.textAlign ="center";
+
+let y = document.querySelector("#btnAdd");
+y.style.backgroundColor = "green";
+y.style.color ="white";
+y.style.padding = "2vmax 4vmax";
+y.style.curosr = "pointer";
+y.style.border ="none";
+y.setAttribute("class", "meroclass");
+console.log(y.getAttribute("class"));
+
+
+let v= document.querySelector("#btnDelete");
+v.style.backgroundColor = "red";
+v.style.color ="white";
+v.style.padding = "2vmax 4vmax";
+v.style.curosr = "pointer";
+v.style.border ="none";
+
+function addTask(){
+    let display = document.createElement("h1");
+    display.innerText = "This is a new element";
+    document.body.prepend(display);
 
 }
-let cart = [
-    {name:"Dr MArtin ", price:7000,quantity:5},
-    {name: "water bottle",price:500,quantity:2}
-];
-const result = calculateTotal(cart,0.02);
-console.log(`Your total payment is:${result}`);
 
+
+function deleteTask(){
+    let h1 = document.querySelector("h1");
+    h1.remove();
+}
+
+y.onclick = addTask;
+v.onclick = deleteTask;
