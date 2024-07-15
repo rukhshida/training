@@ -460,147 +460,291 @@
 //     age: 56,
 //     occupation: "Professor",
 //     eduction: "Msc csit",
-//     isMarried: true,
-//     address:{
-//         street:"Bagbazar",
-//         city: "ktm",
-//         country:"Nepal",
+// //     isMarried: true,
+// //     address:{
+// //         street:"Bagbazar",
+// //         city: "ktm",
+// //         country:"Nepal",
        
-//     },
-//     greet: function () {
-//         console.log(`Hello my name is:${this.name}.And i am ${this.age}`)
-//     },
-// };
-// const {
-//     name,
-//     age,
-//     eduction,
-//     occupation,
-//     isMarried,
-//     address:{ street, city,country},
-// } = person;
-// console.log(name,age,eduction,occupation,isMarried,street,city,country);
-// person.greet();
+// //     },
+// //     greet: function () {
+// //         console.log(`Hello my name is:${this.name}.And i am ${this.age}`)
+// //     },
+// // };
+// // const {
+// //     name,
+// //     age,
+// //     eduction,
+// //     occupation,
+// //     isMarried,
+// //     address:{ street, city,country},
+// // } = person;
+// // console.log(name,age,eduction,occupation,isMarried,street,city,country);
+// // person.greet();
 
 
-//  function in javascrip
-// function myfunc(radius){
-//     return Math.PI * radius * radius;
-// }
-// let ans = myfunc(8)
-// console.log(`the area of two circle is:${ans}`);
+// //  function in javascrip
+// // function myfunc(radius){
+// //     return Math.PI * radius * radius;
+// // }
+// // let ans = myfunc(8)
+// // console.log(`the area of two circle is:${ans}`);
 
 
-///calculateTotal
+// ///calculateTotal
 
-// function calculateTotal(cartItemd,taxrate){
-//     let total = 0;
-//     for(let i=0; i<cartItemd.length; i++){
-//         total += cartItemd[i].price * cartItemd[i].quality;
-//     }
-//     total+= total * taxrate;
-//     return total
+// // function calculateTotal(cartItemd,taxrate){
+// //     let total = 0;
+// //     for(let i=0; i<cartItemd.length; i++){
+// //         total += cartItemd[i].price * cartItemd[i].quality;
+// //     }
+// //     total+= total * taxrate;
+// //     return total
 
-// }
-// let cart = [
-//     {name:"Dr MArtin ", price:7000,quantity:5},
-//     {name: "water bottle",price:500,quantity:2}
-// ];
-// const result = calculateTotal(cart,0.02);
-// console.log(`Your total payment is:${result}`);
-
-
-// function myFunction(){
-//     let a = prompt("Enter first number?");
-//     let b = prompt("Enter second number?");
-//     let result = Number(a) + Number(b);
-//     if(result){
-//         alert (`the sum of two number is:${result`});
-//      } 
-// }
-// myFunction();
+// // }
+// // let cart = [
+// //     {name:"Dr MArtin ", price:7000,quantity:5},
+// //     {name: "water bottle",price:500,quantity:2}
+// // ];
+// // const result = calculateTotal(cart,0.02);
+// // console.log(`Your total payment is:${result}`);
 
 
+// // function myFunction(){
+// //     let a = prompt("Enter first number?");
+// //     let b = prompt("Enter second number?");
+// //     let result = Number(a) + Number(b);
+// //     if(result){
+// //         alert (`the sum of two number is:${result`});
+// //      } 
+// // }
+// // myFunction();
 
-// scoping//
-// function myFunction(){
-// if (true){
-// var x = 60;
-// let y = 40;
-// const z = 30;
-// console.log(y);
-// console.log(z);
-// }
-//     console.log(x);
-// }
-// myFunction();
+
+
+// // scoping//
+// // function myFunction(){
+// // if (true){
+// // var x = 60;
+// // let y = 40;
+// // const z = 30;
+// // console.log(y);
+// // console.log(z);
+// // }
+// //     console.log(x);
+// // }
+// // myFunction();
+// //
+
+// // //Dom//
+// // console.log(document.body); // document is the object with its hepl of access the element
+
+// // let result=document.getElementById("hello");
+// // // console.log(result);/
+// // result.innerText = "Learning java script!! ";
+// // result.style.backgroundColor = "silver";
+// // result.style.color = "purple";
+// // result.style.textAlign ="center";
+
+// // let output=document.getElementsByClassName("myclass")[0];
+// // console.log(output);
+// // output.innerText = "alhamdulilla";
+// // output.style.backgroundColor = "green";
+// // output.style.color = "red";
+// // output.style.textAlign ="center";
+
+
+// // let ans=document.getElementsByClassName("myclass");
+// // ans[1].innerText = "Hello Home";
+// // ans[1].style.backgroundColor = "yellow";
+// // ans[1].style.color = "blue";
+// // ans[1].style.textAlign ="center";
+
+// // let show=document.getElementsByTagName("span");
+// // console.log(show[0]);
+// // show[0].innerText = "let's do it!!";
+// // show[0].style.backgroundColor = "purple";
+// // show[0].style.color = "black";
+// // show[0].style.textAlign ="center";
+
+// // let x=document.getElementsByTagName("span");
+// // x[1].innerText = "Hello Home";
+// // x[1].style.backgroundColor = "red";
+// // x[1].style.color = "blue";
+// // x[1].style.textAlign ="center";
+
+// // let y = document.querySelector("#btnAdd");
+// // y.style.backgroundColor = "green";
+// // y.style.color ="white";
+// // y.style.padding = "2vmax 4vmax";
+// // y.style.cursor = "pointer";
+// // y.style.border ="none";
+// // y.setAttribute("class", "meroclass");
+// // console.log(y.getAttribute("class"));
+
+
+// // let v= document.querySelector(".btnDelete");
+// // v.style.backgroundColor = "red";
+// // v.style.color ="white";
+// // v.style.padding = "2vmax 4vmax";
+// // v.style.cursor = "pointer";
+// // v.style.border ="none";
+// // console.log(y);
+
+// // function addTask(){
+// //     let display = document.createElement("h1");
+// //     display.innerText = "This is a new element";
+// //     document.body.prepend(display);
+// // }
+
+// // function deleteTask(){
+// //     let h1 = document.querySelector("h1");
+// //     h1.remove();
+// // }
+
+// // y.onclick = addTask;
+// // v.onclick = deleteTask;
+
+
 //
+// let heading = document.getElementById("heading");
+// let box1 = document.getElementById("box1");
+// let btnClick = document.getElementById("btnclick");
+// let input = document.querySelector("input");
 
-// //Dom//
-// console.log(document.body); // document is the object with its hepl of access the element
-
-let result=document.getElementById("hello");
-// console.log(result);/
-result.innerText = "Learning java script!! ";
-result.style.backgroundColor = "silver";
-result.style.color = "purple";
-result.style.textAlign ="center";
-
-let output=document.getElementsByClassName("myclass")[0];
-console.log(output);
-output.innerText = "alhamdulilla";
-output.style.backgroundColor = "green";
-output.style.color = "red";
-output.style.textAlign ="center";
+// btnClick.style.backgroundcolor = "green";
+// btnClick.style.color = "purple";
+// btnClick.style.padding = "20px";
+// btnClick.style.border = "none";
+// btnClick.style.cursor = "pointer";
+// box1.classList.add("classBox");
 
 
-let ans=document.getElementsByClassName("myclass");
-ans[1].innerText = "Hello Home";
-ans[1].style.backgroundColor = "yellow";
-ans[1].style.color = "blue";
-ans[1].style.textAlign ="center";
 
-let show=document.getElementsByTagName("span");
-console.log(show[0]);
-show[0].innerText = "let's do it!!";
-show[0].style.backgroundColor = "purple";
-show[0].style.color = "black";
-show[0].style.textAlign ="center";
+// btnClick.addEventListener("click", ()=> {
+//     console.log("Button was clicked");
+//     box1.classList.add("classBox"); 
+//     box1.style.color="yellow";
+//     box1.style.background="pink";  
+// });
 
-let x=document.getElementsByTagName("span");
-x[1].innerText = "Hello Home";
-x[1].style.backgroundColor = "red";
-x[1].style.color = "blue";
-x[1].style.textAlign ="center";
+// btnClick.addEventListener("contextmenu", (e) => {
+//     e.preventDefault();
+//     btnClick.style.backgroundcolor = "green";
+// });
 
-let y = document.querySelector("#btnAdd");
-y.style.backgroundColor = "green";
-y.style.color ="white";
-y.style.padding = "2vmax 4vmax";
-y.style.cursor = "pointer";
-y.style.border ="none";
-y.setAttribute("class", "meroclass");
-console.log(y.getAttribute("class"));
+// btnClick.addEventListener("dblclick", ()=>{
+//     document.body.backgroundcolor="orange";
+// });
+
+// btnClick.addEventListener("click",() => {
+//     document.body.style.background="";
+// });
+
+// window.addEventListener("click", (e) => {
+//     console.log(e.clientX);
+//     console.log(e.clientY);
+// });
+
+// // window.addEventListener("contextmenu", (e) => {
+// //     e.preventDefault();
+// // });
+
+// box1.addEventListener("mouseover", () =>{
+//     btnClick.style.transform = "scale(1.1)";
+//     heading.innerText = "kathmandu kathmandu";
+//     heading.style.backgroundcolor ="purple";
+//     heading.style.color = "blue";
+// });
+
+// box1.addEventListener("mouseout", () =>{
+//     btnClick.style.transform = "";
+//     heading.innerText = "";
+//     heading.style.backgroundcolor ="";
+//     heading.style.color = "";
+// });
+
+// input.addEventListener("change", (e) =>{
+//     console.log("changing");
+//     console.log(e);
+// });
 
 
-let v= document.querySelector(".btnDelete");
-v.style.backgroundColor = "red";
-v.style.color ="white";
-v.style.padding = "2vmax 4vmax";
-v.style.cursor = "pointer";
-v.style.border ="none";
-console.log(y);
+// mathobject
+// let num =4.7;
+// let answ = math.random(num);
+// console.log(answ);
 
-function addTask(){
-    let display = document.createElement("h1");
-    display.innerText = "This is a new element";
-    document.body.prepend(display);
+// let putput = math.random();
+// console.log(output);
+
+// let num = 5;
+// let result = math.floor(num);
+// console.log(result);
+
+// let num = 5;
+// let result = math.ceil(num);
+// console.log(result);
+
+// let base = 8;
+// let extonent = 4;
+// let output = math.pow(base, extonent);
+// console.log(output);
+
+
+// function subtract(a,b){
+//     let result = a-b;
+//     return Math.abs(result);
+// }
+// let output = subtractI (9-3);
+// console.log(output);
+
+// function GeneraeOTP (){
+//     let otp = math.floor(100000 +Math.random() * 90000);
+//     return otp;
+// }
+// let ans = GeneraeOTP();
+// console.loh(ans);
+
+// let num Math.max(1,2,3,4,5)
+// console.log(num)
+// let result = Math.min(1,2,3,4,5);
+
+
+
+//storing data in sessionstoragr and localstorage//
+
+// let input = document.getElementById("my input");
+// let btnAdd = document.getElementById("btnAdd");
+// let btnRem = document.getElementById("btnRem");
+// const myFunc = () => {
+//     localStorage.setItem("key1",input.value)
+// };
+// btnAdd.addEventListener("click", myFunc);
+// btnRem.addEventListener("click", () => {
+
+//     localStorage.removeItem("key1");
+// });
+
+// if (localStorage.getItem("key1")){
+//     alert(localStorage.getItem("key1"));
+// }
+
+let input = document.getElementById("my input");
+let btnAdd = document.getElementById("btnAdd");
+let btnRemove = document.getElementById("btnRem");
+const myFunc = () => {
+    localStorage.setItem("key1");
+};
+btnAdd.addEventListener("click", myFunc);
+btnRemove.addEventListener("click", () => {
+
+    localStorage.removeItem("key1");
+});
+
+if (localStorage.getItem("key1")){
+  console.log(JSON.parse(localStorage.getItem("key1")));
 }
 
-function deleteTask(){
-    let h1 = document.querySelector("h1");
-    h1.remove();
-}
 
-y.onclick = addTask;
-v.onclick = deleteTask;
+
