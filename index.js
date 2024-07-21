@@ -730,21 +730,113 @@
 //     alert(localStorage.getItem("key1"));
 // }
 
-let input = document.getElementById("my input");
-let btnAdd = document.getElementById("btnAdd");
-let btnRemove = document.getElementById("btnRem");
-const myFunc = () => {
-    localStorage.setItem("key1");
-};
-btnAdd.addEventListener("click", myFunc);
-btnRemove.addEventListener("click", () => {
+// let input = document.getElementById("my input");
+// let btnAdd = document.getElementById("btnAdd");
+// let btnRemove = document.getElementById("btnRem");
+// const myFunc = () => {
+//     localStorage.setItem("key1");
+// };
+// btnAdd.addEventListener("click", myFunc);
+// btnRemove.addEventListener("click", () => {
 
-    localStorage.removeItem("key1");
-});
+//     localStorage.removeItem("key1");
+// });
 
-if (localStorage.getItem("key1")){
-  console.log(JSON.parse(localStorage.getItem("key1")));
-}
+// if (localStorage.getItem("key1")){
+//   console.log(JSON.parse(localStorage.getItem("key1")));
+// }
 
 
 
+// const myFunc = () => {
+//   console.log("I love js");
+// };
+// //settime
+// // setTimeout(() => {
+// //   console.log("I love js");
+// // },2000);
+
+
+// setInterval(() => {
+//   console.log("I love js");
+// },1000);
+
+// const intervalId = setInterval(() => {
+//   clearInterval(intervalId);
+// },5000);
+
+
+// function UpdateClock(){   
+//   const clock = document.querySelector(".clock");
+//   const now = new Date();
+//   const hours = now.getHours().toString().padStart(2, "0");
+//   const minutes = now.getMinutes().toString().padStart(2, "0");
+//   const seconds = now.getSeconds().toString().padStart(2, "0");
+
+//   clock.innerHTML = `${hours}:${minutes}:${seconds}`;
+// }
+// setInterval(UpdateClock, 1000);
+
+
+// oop(JAvascript)
+
+// function Person(name,age,addres){
+//   this.name= name;
+//   this.age =age;
+//   this.addres =addres;
+
+//   this.greeting = function(){
+//     let greet =`Hello my name is ${this.name}. i am ${this.age}. years old i live at ${this.addres}`;
+//     return greet;
+//   };
+// }
+
+// const person1 = new Person("Reva", 22, "ktm");
+// const person2 = new Person("Rida", 28, "pokhara");
+// const person3 = new Person("Sulaiman", 22, "ktm");
+
+// console.log(person1,person2,person3);
+// console.log(person3,.greeting());
+
+ function BankAccount(customername,balance=0){
+  this.customername = customername;
+  this.balance = balance;
+  this.accountNumber = Date.now();
+
+ this.deposit = function (amount) {
+  this. balance += amount;
+ };
+
+ this.withdraw = function (amount) {
+  this.balance -= amount;
+ };
+ }
+ const addForm = document.querySelector("#addForm");
+ const customerNmae = document.querySelector("#customerNmae");
+ const balance = document.querySelector("#balance");
+
+ let accounts = [];
+ addForm.addEventListener("submit",(e)=>{
+  e.preventDefault()
+  let account = new BankAccount(customerNmae.value, +balance.value);
+  accounts.push(account);
+  console.log(accounts);
+
+ });
+
+  // console.log(addForm);
+  // console.log(customerNmae);
+  // console.log(balance);
+
+
+ 
+
+//   const SulaimanAccount= new BankAccount("Sulaiman shah", 900);
+//   const RukhshidaAccount = new BankAccount("Rukhshida ilyas", 700);
+//   const revaAccount = new BankAccount("Reva", 400);
+
+//   SulaimanAccount.deposit(500);
+//   SulaimanAccount.withdraw(100);
+
+
+//  console.log(SulaimanAccount, RukhshidaAccount,revaAccount);
