@@ -798,77 +798,130 @@
 // console.log(person1,person2,person3);
 // console.log(person3,.greeting());
 
- function BankAccount(customername,balance=0){
-  this.customername = customername;
-  this.balance = balance;
-  this.accountNumber = Date.now();
+//  function BankAccount(customername,balance=0){
+//   this.customername = customername;
+//   this.balance = balance;
+//   this.accountNumber = Date.now();
 
- this.deposit = function (amount) {
-  this. balance += amount;
- };
+//  this.deposit = function (amount) {
+//   this. balance += amount;
+//  };
 
- this.withdraw = function (amount) {
-  this.balance -= amount;
- };
- }
- const addForm = document.querySelector("#addForm");
- const customerNmae = document.querySelector("#customerNmae");
- const balance = document.querySelector("#balance");
+//  this.withdraw = function (amount) {
+//   this.balance -= amount;
+//  };
+//  }
+//  const addForm = document.querySelector("#addForm");
+//  const customerNmae = document.querySelector("#customerNmae");
+//  const balance = document.querySelector("#balance");
 
- const depositNumber = document.querySelector("#depositNumber");
- const accountNumber = document.querySelector("#accountNumber");
- const amount = document.querySelector("#amount");
-
-
-
- const withdrawForm = document.querySelector("#withdrawForm");
- const withdrawAccount = document.querySelector("#withdrawAccount");
- const withdrawAmount = document.querySelector("#withdrawAmount");
+//  const depositNumber = document.querySelector("#depositNumber");
+//  const accountNumber = document.querySelector("#accountNumber");
+//  const amount = document.querySelector("#amount");
 
 
 
- let accounts = [];
- addForm.addEventListener("submit",(e)=>{
-  e.preventDefault()
-  let account = new BankAccount(customerNmae.value, +balance.value);
-  accounts.push(account);
-  console.log(accounts);
-
- });
-
- depositForm.addEventListener("submit", (e)=> {
-  e.preventDefault();
-  let account = accounts.find(
-    (account) => account.accountNumber === +accountNumber.value
-  );
-  account.deposit(+amount.value);
-  console.log(accounts);
- });
-
-
- withdrawForm.addEventListener("submit", (e)=> {
-  e.preventDefault();
-  let account = accounts.find(
-    (account) => account.accountNumber === +withdrawAccountNumber.value
-  );
-  account.withdraw(+withdrawAmount.value);
-  console.log(accounts);
- });
+//  const withdrawForm = document.querySelector("#withdrawForm");
+//  const withdrawAccount = document.querySelector("#withdrawAccount");
+//  const withdrawAmount = document.querySelector("#withdrawAmount");
 
 
 
+//  let accounts = [];
+//  addForm.addEventListener("submit",(e)=>{
+//   e.preventDefault()
+//   let account = new BankAccount(customerNmae.value, +balance.value);
+//   accounts.push(account);
+//   console.log(accounts);
 
-  // console.log(addForm);
-  // console.log(customerNmae);
-  // console.log(balance);
+//  });
+
+//  depositForm.addEventListener("submit", (e)=> {
+//   e.preventDefault();
+//   let account = accounts.find(
+//     (account) => account.accountNumber === +accountNumber.value
+//   );
+//   account.deposit(+amount.value);
+//   console.log(accounts);
+//  });
+
+
+//  withdrawForm.addEventListener("submit", (e)=> {
+//   e.preventDefault();
+//   let account = accounts.find(
+// //     (account) => account.accountNumber === +withdrawAccountNumber.value
+// //   );
+// //   account.withdraw(+withdrawAmount.value);
+// //   console.log(accounts);
+// //  });
+
+
+//   // console.log(addForm);
+//   // console.log(customerNmae);
+//   // console.log(balance);
  
 
-//   const SulaimanAccount= new BankAccount("Sulaiman shah", 900);
-//   const RukhshidaAccount = new BankAccount("Rukhshida ilyas", 700);
-//   const revaAccount = new BankAccount("Reva", 400);
+// //   const SulaimanAccount= new BankAccount("Sulaiman shah", 900);
+// //   const RukhshidaAccount = new BankAccount("Rukhshida ilyas", 700);
+// //   const revaAccount = new BankAccount("Reva", 400);
 
-//   SulaimanAccount.deposit(500);
-//   SulaimanAccount.withdraw(100);
+// //   SulaimanAccount.deposit(500);
+// //   SulaimanAccount.withdraw(100);
 
 
-//  console.log(SulaimanAccount, RukhshidaAccount,revaAccount);
+// //  console.log(SulaimanAccount, RukhshidaAccount,revaAccount);
+
+
+// const revaAccount = new BankAccount("reva", 900);
+// const shamaAccount = new BankAccount("sahma", 100);
+// shamaAccount.deposit(200);
+
+// console.log(revaAccount,shamaAccount);
+
+
+
+
+// function BankAccount(customerName,balance = 0) {
+//   this.customerName = customerName;
+//   this.balance =balance;
+//   this.accountNumber = Date.now();
+// }
+  
+// const shamaAccount = new BankAccount("shamaAccount", 100);
+// const shakibAccount = new BankAccount("shakibAccount", 200);
+
+
+// BankAccount.prototype.deposit =function (amount) {
+//   this.balance += amount;
+// }
+//   BankAccount.prototype.withdraw =function (amount) {
+//     this.balance -= amount;
+// };
+
+// shamaAccount.deposit(1000);
+// shakibAccount.deposit(500);
+// console.log(shakibAccount,shamaAccount);
+
+class BankAccount{
+  constructor(customerName,balance=0){
+    this.customerName = customerName;
+    this.balance = balance;
+    this.accountNumber = Math.floor(Math.random() * 1000);
+  }
+
+  deposit(amount){
+    this.balance += amount;
+  }
+
+  withdraw(amount){
+    this.balance -= amount;
+  }
+}
+ const rashmiAccount = new BankAccount("rashmi", 300);
+ const saniAccount = new BankAccount("sani", 100);
+ rashmiAccount.deposit(400);
+ saniAccount.deposit(20);
+
+ console.log(saniAccount,rashmiAccount);
+
+
