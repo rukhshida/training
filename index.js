@@ -815,6 +815,18 @@
  const customerNmae = document.querySelector("#customerNmae");
  const balance = document.querySelector("#balance");
 
+ const depositNumber = document.querySelector("#depositNumber");
+ const accountNumber = document.querySelector("#accountNumber");
+ const amount = document.querySelector("#amount");
+
+
+
+ const withdrawForm = document.querySelector("#withdrawForm");
+ const withdrawAccount = document.querySelector("#withdrawAccount");
+ const withdrawAmount = document.querySelector("#withdrawAmount");
+
+
+
  let accounts = [];
  addForm.addEventListener("submit",(e)=>{
   e.preventDefault()
@@ -824,11 +836,31 @@
 
  });
 
+ depositForm.addEventListener("submit", (e)=> {
+  e.preventDefault();
+  let account = accounts.find(
+    (account) => account.accountNumber === +accountNumber.value
+  );
+  account.deposit(+amount.value);
+  console.log(accounts);
+ });
+
+
+ withdrawForm.addEventListener("submit", (e)=> {
+  e.preventDefault();
+  let account = accounts.find(
+    (account) => account.accountNumber === +withdrawAccountNumber.value
+  );
+  account.withdraw(+withdrawAmount.value);
+  console.log(accounts);
+ });
+
+
+
+
   // console.log(addForm);
   // console.log(customerNmae);
   // console.log(balance);
-
-
  
 
 //   const SulaimanAccount= new BankAccount("Sulaiman shah", 900);
