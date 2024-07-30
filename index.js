@@ -902,26 +902,182 @@
 // shakibAccount.deposit(500);
 // console.log(shakibAccount,shamaAccount);
 
-class BankAccount{
-  constructor(customerName,balance=0){
-    this.customerName = customerName;
-    this.balance = balance;
-    this.accountNumber = Math.floor(Math.random() * 1000);
+
+//class example//
+// class BankAccount{
+//   constructor(customerName,balance=0){
+//     this.customerName = customerName;
+//     this.balance = balance;
+//     this.accountNumber = Math.floor(Math.random() * 1000);
+//   }
+
+//   deposit(amount){
+//     this.balance += amount;
+//   }
+
+//   withdraw(amount){
+//     this.balance -= amount;
+//   }
+// }
+//  const rashmiAccount = new BankAccount("rashmi", 300);
+//  const saniAccount = new BankAccount("sani", 100);
+//  rashmiAccount.deposit(400);
+//  saniAccount.deposit(20);
+
+//  console.log(saniAccount,rashmiAccount);
+
+
+//asynchronus example.
+// console.log("Hello world")
+// function Display(){
+//   for(let i =0; i<100; i++) {
+//     console.log(i);
+//   }
+// }
+
+// Display();
+// setTimeout(() => {
+//   alert("i love js");
+
+// },3000);
+// console.log("rukhshida");
+
+//callback function example(asynchronus)
+// function Sum(a,b, cb) {
+//   const ans = a+b;
+//   cb(ans);
+// }
+// function Display(result){
+//   const h1= document.createElement("h1")
+//   h1.innerText = `The Sum of Result is:$(result)`
+//   document.body.append(h1)
+// }
+// Sum(4,5, Display);
+// arr.forEach(()=>)
+
+// let arr =[2,3,4,5,6,7];
+
+// function Calculate(arr=[], cb){
+//   let ans = [];
+//   for(let i = 0; i < arr.length; i++) {
+//     const element = cb(arr[i]);
+//     ans.push(element);
+//   }
+//   console.log(ans);
+// }
+// Calculate(arr,(a)=> a*10);
+// Calculate(arr,(a)=> a/10);
+
+//   arr.forEach((value,index) =>{})
+
+  // let product = [];
+  // const AddProduct = () =>{
+  //   setTimeout(() =>{
+  //     product.push(
+  //       {id:1, name:"DR shreegun", price:15000, inStock:true},
+  //       {id:1, name:"DR shama", price:115000, inStock:true},
+
+  //     );
+  //     console.log(product);
+  //     setTimeout(() =>{
+  //       console.log("cb")
+  //     },2000);
+  //     cb();
+  //   },4000);
+  // };
+
+  // const DisplayProduct = () =>{
+  //   setTimeout(()=>{
+  //     product.forEach((product)=>{
+  //       const h1 = document.createElement("h1");
+  //       h1.innerText.product.name;
+  //       document.body.append(h1);
+
+  //     });  
+  //     },1000);
+    
+  // };
+  // AddProduct();
+
+
+
+  //promise types are( pending, fullfill and rejected)
+
+  // const res =  new Promise((resolve, rejected)=>{
+  //   let success =  true;
+  //   if (success) {
+  //   resolve("Promise fullfiled");
+  //   }else{
+  //     rejected("promise rejected");
+  //   }
+  // });
+  // res.then((param) => console.log(param)).catch((error) => console.log(error));
+
+
+  // const res =  new Promise((resolve, rejected)=>{
+  //   rejected("rejected");
+  // });
+  // res.then((param) => console.log(param)).catch((error) => console.log(error));
+
+
+
+  //json example(in new tab type extensio then search json extensio after that in another new tab search free api copy url of them and paste in)
+  // const fetchData = () =>{
+  //   fetch(`https://catfact.ninja/fact`)
+  //   .then((res)=> res.json())
+  //   .then((data)=>{
+  //     const h1 = document.createElement("h1");
+  //     h1.innerText = data.fact;
+  //     document.body.append(h1);
+
+  //   })
+    
+  //   .catch((error)=> console.log(error));
+  // };
+  // fetchData();
+
+
+  //api
+  // const fetchData = async ()=> {
+  //    const res = await fetch(`https://catfact.ninja/fact`);
+  //    const data = await res.json();
+  //    const h1 = document.createElement("h1");
+  //    h1.innerText = data.fact;
+  //    document.body.append(h1);
+  // };
+  // fetchData();
+
+//   const fetchData = async ()=> {
+//     try{
+//     const res = await fetch(`https://catfact.ninja/fact`);
+//     const data = await res.json();
+//     const h1 = document.createElement("h1");
+//     h1.innerText = data.fact;
+//     document.body.append(h1);
+
+//     } catch(error) {
+//       console.log(error);
+//     }
+    
+//  };
+//  fetchData();
+
+
+
+const fetchData = async ()=> {
+  try{
+  const res = await fetch(`https://catfact.ninja/facts`);
+  const data = await res.json();
+  const facts = data.data;
+     facts.forEach((value,index)=>{
+      const h1 = document.createElement("h1");
+      h1.innerText = value.facts;
+      document.body.append(h1);
+     });
+
+  } catch(error) {
+    console.log(error);
   }
-
-  deposit(amount){
-    this.balance += amount;
-  }
-
-  withdraw(amount){
-    this.balance -= amount;
-  }
-}
- const rashmiAccount = new BankAccount("rashmi", 300);
- const saniAccount = new BankAccount("sani", 100);
- rashmiAccount.deposit(400);
- saniAccount.deposit(20);
-
- console.log(saniAccount,rashmiAccount);
-
-
+  
+};
+fetchData();

@@ -1,0 +1,23 @@
+
+{
+"person":{
+    "name":"shsama noor",
+    "age": 21,
+    "isMarried":false
+},
+
+"Product":[
+    {
+    "id":101,
+    "ProductName":"parleg",
+    "Price":20,
+    "isStock":true
+},
+{
+    "id":102,
+    "ProductName":"chauchau",
+    "Price":25,
+    "isStock":true
+}
+]
+}
